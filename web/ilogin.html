@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/top.css">
+    <link rel="stylesheet" type="text/css" href="css/lp.css">
+    <meta charset="UTF-8">
+    <title>Goutham</title>
+    <script src="jq.js"></script>
+    <script src="plogin.js"></script>
+    <style>
+        ::placeholder {
+    color: #333;
+    opacity: 0.4;
+}
+        h1,h2{
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-size: 16px;
+        }
+        input[type='text']:focus{
+            outline: none; 
+            border-bottom: 1.5px solid white;
+        }
+        th{
+            width:300px;
+            text-align: left;
+            line-height: 20px;
+        }
+        td{
+            width: 400px;
+        }
+        input[type='text']{
+            width: 400px;
+            border-radius: 0px;
+            background-color: transparent;
+            border: 0.5px solid white;
+            padding: 5px;
+        }
+        input[type='text']:hover{
+            border: 1.5px solid white;
+        }
+            input[type=submit],input[type=reset]{
+                width: 30%;
+            }
+            input[type=submit]:hover{
+                background-color: green;
+                box-shadow:5px 5px 10px grey;
+            }
+            input[type=reset]:hover{
+                background-color: tomato;
+                box-shadow:5px 5px 10px grey;
+            }
+            input[type=file]{
+                margin:0;
+                width: 60%;
+                height: 200px;
+                opacity:0;
+            }
+            #s{
+                margin-left: 20%;
+                height:250px;
+                width: 60%;
+                border: 1px solid #333;
+                border-style: dashed;
+            }
+            #l{
+                opacity :1;
+                height:200px;
+                background-color: white;
+                width: 60%;
+                padding-top: 5%;
+                text-align: center;
+            }
+            p{
+                font-size: 18px;
+            }
+        </style>
+</head>
+<body style="left:40%;" id="bd">
+    <div id="navbar" style="z-index: 5">
+         <ul id="topm" style="background:rgba(0, 0, 0, 0.34);">
+        <li ><a href="#"><i class="fa fa-bars"></i></a></li>
+        <li><a  href="#">Home</a></li>
+        <li><a style="float: right;display: none" href="#" id="log">Login</a></li>
+        <li><a id="so" style="float: right;" href="index_5.html">SignOut</a></li>
+        <li><a id="usern" style="float: right;" href="#"></a></li>
+    </ul>
+        <script>
+window.onscroll = function() {scrollFunction();};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+}
+</script>
+</div>
+    
+<div id="main" >
+    <!--<header><img width=100% id="clogo" src="images/g.jpg"></header>-->
+    <ul id="topm" >
+        <li ><a href="#"><i style="color:white;" class="fa fa-bars"></i></a></li>
+        <li><a  href="#">Home</a></li>
+        <li><a style="float: right;display: none" href="#" id="log">Login</a></li>
+        <li><a id="so" style="float: right;" href="index_5.html">SignOut</a></li>
+        <li><a id="user" style="float: right;" href="#"></a></li>
+    </ul>
+</div>
+    <div>
+    <form action="upload" method="post" enctype="multipart/form-data" >
+    <div >
+        <h1>Details of CO attainment</h1>
+        <table style="margin-left:325px">
+            <tr>
+                <th><h2>Programme </h2></th></tr><tr><td><input type="text" name="11" required="" placeholder="B.Tech"></td>
+            </tr>
+            <tr>
+                <th><h2>Faculty Name</h2></th></tr><tr><td><input type="text" name="2" required="" placeholder="GOUTHAM"></td>
+            </tr>
+            <tr>
+                <th><h2>Subject Name & Code</h2></th></tr><tr><td><input type="text" name="3" required="" placeholder="WEB PROGRAMMING Lab  15CT1123"></td>
+            </tr>
+            <tr>
+                <th><h2>Academic Year</h2></th></tr><tr><td><input type="text" name="4" required="" placeholder="2015-16"></td>
+            </tr>
+            <tr>
+                <th><h2>Section</h2></th></tr><tr><td><input type="text" name="5" required="" placeholder="CSE-2"></td>
+            </tr>
+            <tr>
+                <th><h2>Semester</h2></th></tr><tr><td><input type="text" name="6" required="" placeholder="V"></td>
+            </tr>
+        </table>
+    </div>
+<div id="frames">
+    <div id="s" style="position:relative;top:0px;z-index:2;">
+        <input  type="file" name="file" style="width: 100%;height:100%" onchange='getImg(event)' accept=".xlsx"/>
+        <script>
+            function defaul(){
+                $("#img").attr("src","images/upic_1.png");
+                document.getElementById("h").innerHTML='Drag here or <ha style="color:dodgerblue">Browse</ha> to Upload';
+        }
+        function getImg(e){
+            var files = e.target.files;
+            var file = files[0];
+            $("#img").attr("src","images/f1.gif");
+            setTimeout(
+                    function() {
+                        $("#img").attr("src","images/fp.png");
+                        document.getElementById("h").innerHTML=file.name;
+                    }, 5000);
+        }
+        </script>
+        </div>  
+      <div style=" position:relative; top:-251px;left:20.1%; z-index:0;background:rba(0,0,0,0.6)" id='l'>
+          <img src="images/upic_1.png" width="100px" id="img" align="center"/>
+          <h2 id="h" align="center">Drag here or <ha style="color:dodgerblue">Browse</ha> to Upload</h2>
+      </div>
+        <div style=" position:relative; top:-210px; z-index:0;" align="center" >
+            <input type='submit' >
+            <input type='reset' onclick="defaul()">
+        </div>
+</div>
+    </form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>

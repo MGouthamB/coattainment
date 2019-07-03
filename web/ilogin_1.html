@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/top.css">
+    <link rel="stylesheet" type="text/css" href="css/lp.css">
+    <meta charset="UTF-8">
+    <title>Goutham</title>
+    <script src="jq.js"></script>
+    <script src="plogin.js"></script>
+    <style>
+            input[type=submit]{
+                width: 10%;
+            }
+            input[type=file]{
+                margin:0;
+                width: 60%;
+                height: 200px;
+                border: 1px solid dodgerblue;
+                border-style: dashed;
+                opacity:0;
+            }
+            #s{
+                margin-left: 20%;
+                height:250px;
+                width: 60%;
+                border: 1px solid dodgerblue;
+                border-style: dashed;
+            }
+            p{
+                font-size: 18px;
+            }
+        </style>
+</head>
+<body >
+<div id="main">
+    <header><img width=100% id="clogo" src="images/g.jpg"></header>
+    <ul id="topm" >
+        <li ><a href="#" id="bars"><i style="color:white;" class="fa fa-bars"></i></a></li>
+        <li><a  href="#">Home</a></li>
+        <li><a style="float: right;display: none" href="#" id="reg">Register</a></li>
+        <li><a style="float: right;display: none" href="#" id="log">Login</a></li>
+        <li><a id="so" style="float: right;" href="#">SignOut</a></li>
+        <li><a id="usern" style="float: right;"></a></li>
+    </ul>
+</div>
+<div >
+    <ul id="sidem" >
+        <li ><a style="float: none;text-align: right" href="#" id="cross"><i style="color:white;" class="fa fa-close"></i></a></li>
+        <li ><a style="float: none;" href="#">Admin</a></li>
+        <li ><a style="float: none;" href="#">HOD</a></li>
+        <li ><a style="float: none;" href="#">Faculty</a></li>
+        <li ><a style="float: none;" href="#">Staff</a></li>
+    </ul>
+</div>
+<div id="frames">
+    <form action="upload" method="post" enctype="multipart/form-data" >
+    <div id="s" style="position:relative;top:0px;left:0px; z-index:2;">
+            <input type="file" name="file" multiple/>
+        </div>  
+      <div style=" position:relative; top:-170px;left:46%; z-index:1;" id='l'>
+          <p>Drag/Drop Here</p>
+      </div>
+        <input type='submit'>
+    </form>
+</div>
+</body>
+</html>

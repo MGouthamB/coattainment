@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jq.js"></script>
+        <script>
+            var i=0;
+            $(document).ready(function(){
+                $("#1").click(function(){
+                    $("#2").show();
+                    i=1;
+                });
+                $("#2").click(function(){
+                    $("#2").hide();
+                    i=0;
+                });
+                $("#3").click(function(){
+                    if(i===1)alert("checked");
+                    else alert("check it");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position:relative;top:0;z-index: 0" id="1"><img src="images/hom.jpg" width="30%"></div>
+        <div style="position:relative;top:-273px;z-index: 1;background-color:blue;height:254px;width:30%;opacity:0.4;" id="2"><p>tick</p></div>
+        <input type="button" id="3" value="Tell">
+    </body>
+</html>

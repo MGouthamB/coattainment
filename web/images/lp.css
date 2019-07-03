@@ -1,0 +1,40 @@
+#d{
+    z-index: 10;
+    display: none;
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow:auto;
+}
+#c{
+    background-color: #fefefe;
+    margin: 10%;
+    padding: 100px;margin: 300px;
+    border-radius: 3px;
+}
+input[type=text],input[type=password]{
+    width: 100%;
+    background-color: #f2f2f2;
+    border:none;
+    height: 30px;
+    border-radius: 5px;
+}
+input[type=submit],input[type=button]{
+    width: 50%;
+    border:none;
+    border-radius: 1px;
+    opacity: 0.8;
+    height:30px;
+}
+H1{
+    text-align: center;
+}
+#iu{
+    background-color: tomato;
+    display:none;
+}
+#ip{
+    background-color: tomato;
+    display:none;
+}
